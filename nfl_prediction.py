@@ -302,13 +302,13 @@ def main():
     mae = mean_absolute_error(y_test, preds)
     print(f"Validation MAE: {mae:.2f}")
 
-    # # Save model locally
-    # model_path = "rf_nfl_model.joblib"
-    # joblib.dump(model, model_path)
-    # print(f"Model saved locally as {model_path}")
-# 
-    # # Push model to Hugging Face Hub
-    # push_model_to_hub(model_path, "your-username/rf-nfl-score-predictor", "Add trained Random Forest model")
+    # Save model locally
+    model_path = "rf_nfl_model.joblib"
+    joblib.dump(model, model_path)
+    print(f"Model saved locally as {model_path}")
+
+    # Push model to Hugging Face Hub
+    push_model_to_hub(model_path, "JackBainbridge/rf-nfl-score-predictor", "Add trained Random Forest model")
 
     # Predict today's games
     print("\n=================================================================")
